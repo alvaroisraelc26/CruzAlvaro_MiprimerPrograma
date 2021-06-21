@@ -190,5 +190,48 @@ namespace MisPrimerosPasos1
         }
     }
 
+    class Programa
+    {
+        static void Main(string[] args)
+        {
+            VerificacionDatos(args);
+            PersonajeElegido(args);
+            ItemsJuego(args);
+            Misiones desafio = new Misiones();
+            desafio.misionDiaria = "Pase Elite Mes de JUNIO";
+            desafio.consumirBotiquines = 5;
+            desafio.curarEscuadra= 10;
+            desafio.matarEnemigos = 5;
+            desafio.daño = 200;
+            desafio.MisionGrupal();
+
+        }
+        
+        static void PersonajeElegido(string[] args)
+        {
+            Personajes  protagonista = new Personajes();
+            protagonista.nombrePersonaje = "ALOK";
+            protagonista.generoPersonaje = "Masculimo";
+            protagonista.habilidadesPersonaje = "Aura que recupera HP cada 5 segundos";
+            protagonista.partidasPersonaje = 25;
+            protagonista.dañoPersonaje = 27;
+            protagonista.habilidadesAdicionales1 = "Disparo a la cabeza 16%";
+            protagonista.habilidadesAdicionales2 = "Agilidad 6%";
+            protagonista.DatosPersonaje();
+
+        }
+        static void VerificacionDatos(string[] args)
+        {
+            FreeFire dato = new FreeFire();
+            dato.nombreJugador = "Alvaro";
+            dato.nacionalidad = "Ecuatoriana";
+            dato.sexo = "Masculino";
+            dato.edad= 23;
+            dato.diamantes = 600;
+            dato.Datos();
+
+        }
+    }
+
 
 }
